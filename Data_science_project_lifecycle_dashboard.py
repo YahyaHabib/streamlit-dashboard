@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-data_path = 'C:/Users/yahya/OneDrive/Documents/University/YEAR 2/Data Science Projects Lifecycle/Dataset/Integrated Data/integrated_water_related_data.csv'
+data_path = '/workspaces/streamlit-dashboard/integrated_water_related_data.csv'
 data = pd.read_csv(data_path)
 
 st.set_page_config(page_title="Health and Environmental Dashboard", layout="wide")
