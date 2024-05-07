@@ -1,6 +1,16 @@
+import os
+st.write("Current directory:", os.getcwd())
+st.write("Files in directory:", os.listdir('.'))
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+
+try:
+    data = pd.read_csv(data_path)
+except FileNotFoundError:
+    st.error(f"Failed to load data from {data_path}. Please check the file path and file presence.")
+    st.stop()  # Stop execution if data cannot be loaded
 
 data_path = '/workspaces/streamlit-dashboard/integrated_water_related_data.csv'
 data = pd.read_csv(data_path)
