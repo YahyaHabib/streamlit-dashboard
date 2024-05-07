@@ -11,7 +11,7 @@ st.write("Files in directory:", os.listdir('.'))
 
 
 
-data_path = '/workspaces/streamlit-dashboard/integrated_water_related_data.csv'
+data_path = 'integrated_water_related_data.csv'
 
 try:
     data = pd.read_csv(data_path)
